@@ -1,0 +1,267 @@
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    position: absolute;
+    max-width: 1440px;
+  }
+  @media (max-width: 1020px) {
+    main {
+      min-height: 100vh;
+      max-width: 375px;
+      flex-direction: column;
+    }
+  }
+  main .cards-wrapper {
+    color: hsl(0, 0%, 100%);
+    align-items: center;
+    display: inherit;
+    flex-direction: column;
+    gap: 2rem;
+    padding-inline: 5rem;
+  }
+  @media (max-width: 1020px) {
+    main .cards-wrapper {
+      flex-direction: column-reverse;
+      height: 100%;
+      width: 100%;
+      padding: 0;
+      gap: 0;
+    }
+  }
+  main .cards-wrapper .card-front,
+  main .cards-wrapper .card-back {
+    display: flex;
+    position: relative;
+    height: 15rem;
+    width: 26rem;
+  }
+  @media (max-width: 1020px) {
+    main .cards-wrapper .card-front,
+    main .cards-wrapper .card-back {
+      height: auto;
+      width: 19rem;
+    }
+  }
+  main .cards-wrapper .card-front .card-background,
+  main .cards-wrapper .card-back .card-background {
+    width: 100%;
+    height: 100%;
+  }
+  main .cards-wrapper .card-front .card-logo,
+  main .cards-wrapper .card-back .card-logo {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+  }
+  @media (max-width: 1020px) {
+    main .cards-wrapper .card-front .card-logo,
+    main .cards-wrapper .card-back .card-logo {
+      width: 4rem;
+    }
+  }
+  main .cards-wrapper .card-front .card-number,
+  main .cards-wrapper .card-back .card-number {
+    position: absolute;
+    left: 1.5rem;
+    top: 9rem;
+    width: 100%;
+    font-size: 1.7rem;
+    letter-spacing: 0.2rem;
+  }
+  @media (max-width: 1020px) {
+    main .cards-wrapper .card-front .card-number,
+    main .cards-wrapper .card-back .card-number {
+      top: 6rem;
+      font-size: 1.1rem;
+    }
+  }
+  main .cards-wrapper .card-front .card-name-exp,
+  main .cards-wrapper .card-back .card-name-exp {
+    position: absolute;
+    left: 1.5rem;
+    top: 12.5rem;
+    width: 87%;
+    display: inherit;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    letter-spacing: 0.2rem;
+  }
+  @media (max-width: 1020px) {
+    main .cards-wrapper .card-front .card-name-exp,
+    main .cards-wrapper .card-back .card-name-exp {
+      top: 9rem;
+      font-size: 0.6rem;
+    }
+  }
+  main .cards-wrapper .card-front .card-name-exp .card-exp-date,
+  main .cards-wrapper .card-back .card-name-exp .card-exp-date {
+    display: inherit;
+  }
+  main .cards-wrapper .card-front .card-cvc,
+  main .cards-wrapper .card-back .card-cvc {
+    position: absolute;
+    left: 21rem;
+    top: 6.8rem;
+    font-size: 0.9rem;
+  }
+  @media (max-width: 1020px) {
+    main .cards-wrapper .card-front .card-cvc,
+    main .cards-wrapper .card-back .card-cvc {
+      left: 15rem;
+      top: 4.7rem;
+      font-size: 0.7rem;
+    }
+  }
+  main .cards-wrapper .card-front {
+    margin-inline-start: -5rem;
+  }
+  @media (max-width: 1020px) {
+    main .cards-wrapper .card-front {
+      margin-inline-start: -3rem;
+      margin-block-start: -4.4rem;
+      z-index: 1;
+    }
+  }
+  @media (max-width: 1020px) {
+    main .cards-wrapper .card-back {
+      margin-inline-end: -4rem;
+    }
+  }
+  main form,
+  main .complete {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 3.5rem;
+    max-width: 30rem;
+    color: hsl(278, 68%, 11%);
+    gap: 1rem;
+  }
+  @media (max-width: 1020px) {
+    main form,
+    main .complete {
+      padding: 1rem;
+    }
+  }
+  main form label,
+  main .complete label {
+    font-size: 0.7rem;
+    letter-spacing: 0.15rem;
+  }
+  main form .error-label,
+  main .complete .error-label {
+    display: none;
+    color: hsl(0, 100%, 66%);
+    font-size: 0.7rem;
+    margin-block-start: 0.5rem;
+    text-transform: none;
+    letter-spacing: normal;
+  }
+  main form input,
+  main .complete input {
+    display: inline-block;
+    width: 100%;
+    height: 3rem;
+    border-radius: 0.5rem;
+    border: 0.1rem solid hsl(270, 3%, 87%);
+    margin-block-start: 0.3rem;
+    padding-inline-start: 1rem;
+    font-family: inherit;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+  main form input::placeholder,
+  main .complete input::placeholder {
+    color: hsl(270, 3%, 87%);
+  }
+  main form input:focus-visible,
+  main .complete input:focus-visible {
+    outline: 0;
+    border: 0.1rem solid;
+    border-color: hsl(249, 99%, 64%);
+  }
+  main form input[type=text].error,
+  main .complete input[type=text].error {
+    border: 0.1rem solid hsl(0, 100%, 66%);
+  }
+  main form input[type=button],
+  main form button,
+  main .complete input[type=button],
+  main .complete button {
+    background-color: hsl(278, 68%, 11%);
+    padding-inline-start: 0;
+    color: hsl(0, 0%, 100%);
+    font-weight: 700;
+  }
+  main form .date-cvc-container,
+  main .complete .date-cvc-container {
+    display: flex;
+    margin-block-start: 0.5rem;
+  }
+  main form .date-cvc-container .date-container,
+  main form .date-cvc-container .cvc-container,
+  main .complete .date-cvc-container .date-container,
+  main .complete .date-cvc-container .cvc-container {
+    display: inherit;
+    flex-direction: column;
+    width: 100%;
+  }
+  main form .date-cvc-container .date-container .exp-date input,
+  main form .date-cvc-container .cvc-container .exp-date input,
+  main .complete .date-cvc-container .date-container .exp-date input,
+  main .complete .date-cvc-container .cvc-container .exp-date input {
+    width: 5rem;
+  }
+  main form .date-cvc-container .date-container .cvc-number,
+  main form .date-cvc-container .cvc-container .cvc-number,
+  main .complete .date-cvc-container .date-container .cvc-number,
+  main .complete .date-cvc-container .cvc-container .cvc-number {
+    display: flex;
+    width: 100%;
+  }
+  main form .confirm-button,
+  main .complete .confirm-button {
+    margin-block-start: 2rem;
+    letter-spacing: 0.1rem;
+    font-size: 1rem;
+  }
+  main .complete {
+    display: none;
+    align-items: center;
+    text-align: center;
+    max-width: 30rem;
+    padding: 2rem 3.5rem;
+  }
+  main .complete h1 {
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+  }
+  main .complete p {
+    color: hsl(279, 6%, 55%);
+    text-transform: none;
+    padding-inline: 3rem;
+    font-size: 1rem;
+  }
+  main .complete button {
+    letter-spacing: 0.1rem;
+    font-family: inherit;
+    width: 100%;
+    border: none;
+    height: 3rem;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    margin-block-start: 2rem;
+  }
+  
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  input[type=number] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+  }
