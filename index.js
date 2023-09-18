@@ -116,11 +116,12 @@ confirmButton.onclick = (e) => {
   e.preventDefault();
 
   if (
-    (!inputName.value,
-    !inputNumber.value,
-    !inputExpMonth.value,
-    !inputExpYear.value,
-    !inputCvc.value)
+    (!inputName.value.trim() ||
+    !inputNumber.value.trim() ||
+    !inputExpMonth.value.trim() ||
+    !inputExpYear.value.trim() ||
+    !inputCvc.value.trim()
+    )
   ) {
     errorLabel.forEach((error) => {
       error.style.display = "block";
